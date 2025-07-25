@@ -14,14 +14,14 @@ function TodoInput({addTodo}) {
   }
 
   return (
-    <form className={`${style.inputSection}`}  > 
+    <form className={`${style.inputSection}`} onSubmit={submitInput} > 
         <input 
         type="text" 
         value={input}
         placeholder='Enter the Task..'
         onChange={(e) => setInput(e.target.value)}
         />
-        <button onClick={submitInput}>Add</button>
+        <button>Add</button>
 
     </form>
   )
