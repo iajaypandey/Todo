@@ -1,0 +1,26 @@
+.inputSection{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.inputSection input{
+    height: 40px;
+    padding: 6px 14px;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #E9E4F0;
+}
+
+button{
+    height: 40px;
+    padding: 0px 8px;
+    background-color: #b5e48c;
+    color: #262626;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}

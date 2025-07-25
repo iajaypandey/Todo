@@ -1,0 +1,39 @@
+.items{
+    width: 60%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #2b2a2a; */
+    width: 100%;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border-bottom: 1px solid gray;
+}
+
+li{
+    color: #262626;
+    list-style: none;
+    text-align: center;
+    word-break: break-all;
+
+}
+.deleteBtn{
+    width: 35px;
+    height: 35px;
+    background-color: #ef476f;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mark_complete{
+    text-decoration: line-through;
+}

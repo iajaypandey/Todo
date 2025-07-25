@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: #D3CCE3;
+}
+
+.conatiner{
+    width: 454px;
+    padding: 30px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+   background: rgba(255, 255, 255, 0.1);         /* semi-transparent */
+   backdrop-filter: blur(10px);                 /* actual blur */
+   -webkit-backdrop-filter: blur(10px);         /* for Safari */
+   border: 1px solid rgba(255, 255, 255, 0.2);   /* subtle border */
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);    /* soft shadow */
+}
+
+h1{
+    color: #262626;
+    font-weight: 800;
+}
+

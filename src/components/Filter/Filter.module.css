@@ -1,0 +1,22 @@
+
+.filter_row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.filter_btn {
+    background: #b5e48c;
+    border: none;
+    color: #262626;
+    cursor: pointer;
+    font-size: 14px;
+}
+.filter_btn.active {
+    font-weight: bold;
+    background: #80ed99;
+}
+.filter_btn:hover {
+    background: #80ed99;
+    transition: ease-in-out .3s;
+}
