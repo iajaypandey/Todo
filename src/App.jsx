@@ -5,6 +5,7 @@ import TodoItem from './components/Item/TodoItem';
 import Filter from './components/Filter/Filter';
 
 
+
 function App() {
 
   const [currentFilter, setFilter] = useState('All');
@@ -44,7 +45,6 @@ function App() {
     return true;
   })
 
-
   
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -52,6 +52,7 @@ function App() {
 
   return (
   <>
+
     <div className={style.conatiner}>
       <h1>To Do App</h1>
       <TodoInput addTodo={addTodo} />

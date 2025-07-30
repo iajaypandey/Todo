@@ -18,5 +18,5 @@
 }
 .filter_btn:hover {
     background: #80ed99;
-    transition: ease-in-out .3s;
+    transition: ease-out .2s;
 }

@@ -1,0 +1,8 @@
+.nav_list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #D3CCE3;
+    width: 100%;
+    font-size: 1.6rem;
+}
