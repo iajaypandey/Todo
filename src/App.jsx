@@ -1,67 +1,33 @@
-import {  useEffect, useState, } from 'react';
-import style from './App.module.css';
-import TodoInput from './components/Input/TodoInput';
-import TodoItem from './components/Item/TodoItem';
-import Filter from './components/Filter/Filter';
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./Home"
+import Navbar from "./Navbar/Navbar"
+import Signup from "./pages/Signup"
 
 
+const router = createBrowserRouter(
+  [
+    {
+      path:"/",
+      element: <div>
+        <Navbar/>
+        <Home/>
+      </div>
+    },
 
+    {
+      path:"/Signup",
+      element: <div>
+        <Navbar/>
+        <Signup/>
+      </div>
+    }
+  ]
+)
 function App() {
-
-  const [currentFilter, setFilter] = useState('All');
-
-  const [todos, setTodos] = useState(() => {
-    const saved = localStorage.getItem('todos');
-    return saved ? JSON.parse(saved) : []
-  });
-
-  // Taking input
-  const addTodo = (text) => {
-    const newTodo = {
-      id: Date.now(),
-      complete: false,
-      text
-    };
-    setTodos([...todos, newTodo])
-  }
-
-  // Render the item..
-  function toggleComplete(id){
-    setTodos(todos.map(todo => (
-      todo.id === id ? {...todo, complete: !todo.complete} : todo
-    )));
-  }
-
-  // Delete the item 
-  function deleteTodo(id){
-    setTodos(todos.filter(todo => todo.id != id));
-  }
-
-  // filtering the task
-  const filterTodos = todos.filter(todo => {
-    if(currentFilter === 'All') return true
-    if(currentFilter === 'Complete') return todo.complete
-    if(currentFilter === 'Pending') return !todo.complete
-    return true;
-  })
-
-  
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  },[todos])
-
   return (
-  <>
-
-    <div className={style.conatiner}>
-      <h1>To Do App</h1>
-      <TodoInput addTodo={addTodo} />
-      <Filter filterTodos={filterTodos} setFilter={setFilter} currentFilter={currentFilter}/>
-      {filterTodos.map(todo => (
-        <TodoItem todo={todo} toggleComplete={toggleComplete} key={todo.id} deleteTodo={deleteTodo}/>
-      ))}
+    <div>
+      <RouterProvider router={router} />
     </div>
-  </>
   )
 }
 
