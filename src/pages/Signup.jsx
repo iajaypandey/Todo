@@ -2,9 +2,15 @@ import { FaUser } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { MdOutlinePassword } from "react-icons/md";
 import style from './Signup.module.css';
-
+import { Outlet, useNavigate } from "react-router-dom";
 
 function Signup() {
+const navigate = useNavigate();
+
+const movetoLogin = () => {
+  navigate('/Login')
+}
+  
   return (
     <div className={`${style.container}`}>
 
@@ -32,9 +38,8 @@ function Signup() {
 
       <div className={style.submit_container}>
         <div className={style.submit}>Sign Up</div>
-        <div className={style.submit}>Login</div>
+        <div className={style.submit} onClick={movetoLogin}>Login</div>
       </div>
-
     </div>
   )
 }
