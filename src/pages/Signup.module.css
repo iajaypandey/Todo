@@ -57,10 +57,10 @@ input{
 }
 .submit_container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
 
 }
 .submit_container .submit{
@@ -80,4 +80,27 @@ input{
     background: #93DA97;
     color: #212121;
     transition: linear .3s;
+}
+
+.loginSection{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.loginSection p{
+    color: #212121;
+    font-weight: 500;
+}
+
+.login_span{
+    color: blue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.forget_password{
+    cursor: pointer;
+    color: crimson;
 }
