@@ -1,9 +1,40 @@
-import React from 'react'
+import { FaUser } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { MdOutlinePassword } from "react-icons/md";
+import style from './Signup.module.css';
+
 
 function Signup() {
   return (
-    <div>
-      <h1>Sign up page</h1>
+    <div className={`${style.container}`}>
+
+      <div className={style.header}>
+        <h1>Sign Up</h1>
+        <div className={style.underline}></div>
+      </div>
+
+      <div className={style.input_container}>
+        <div className={style.Input}>
+          <FaUser color="8ABB6C"/>
+          <input type="text" placeholder='name..'/>
+        </div>
+        <div className={style.Input}>
+          <IoMdMail color="77BEF0"/>
+          <input type="email" placeholder='email..'/>
+        </div>
+        <div className={style.Input}>
+          <MdOutlinePassword color="E14434"/>
+          <input type="password" placeholder='password..'/>
+        </div>
+      </div>
+
+      <div className={style.forget_password}>Lost Password ? Click here</div>
+
+      <div className={style.submit_container}>
+        <div className={style.submit}>Sign Up</div>
+        <div className={style.submit}>Login</div>
+      </div>
+
     </div>
   )
 }
