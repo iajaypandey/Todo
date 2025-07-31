@@ -46,3 +46,10 @@
     font-weight: 700;
     transition: color 0.2s ease;
 }
+
+@media only screen and (max-width: 480px){
+    .navbar{
+        width: 400px;
+        position: sticky;
+    }
+}
